@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AsyncDisplayKit
 
-class ViewController: UIViewController {
+class ViewController: ASViewController<ASDisplayNode> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
