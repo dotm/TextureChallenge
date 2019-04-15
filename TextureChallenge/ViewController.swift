@@ -92,7 +92,7 @@ class CommentNode: ASDisplayNode {
         commentIconNode.image = UIImage(named: "comment")
         commentCountNode.attributedText = NSAttributedString(string: "2", attributes: [
             .foregroundColor: UIColor.black,
-            .font: UIFont.systemFont(ofSize: 24)
+            .font: UIFont.systemFont(ofSize: 24, weight: .light)
             ]
         )
     }
@@ -101,7 +101,7 @@ class CommentNode: ASDisplayNode {
         commentIconNode.style.preferredSize = CGSize(width: 24, height: 24)
         return ASStackLayoutSpec(
             direction: .horizontal,
-            spacing: 0,
+            spacing: 5,
             justifyContent: .center,
             alignItems: .center,
             children: [commentIconNode,commentCountNode]
@@ -120,7 +120,7 @@ class LikeNode: ASDisplayNode {
         likeIconNode.image = UIImage(named: "like")
         likeCountNode.attributedText = NSAttributedString(string: "106", attributes: [
             .foregroundColor: UIColor.black,
-            .font: UIFont.systemFont(ofSize: 24)
+            .font: UIFont.systemFont(ofSize: 24, weight: .light)
             ]
         )
     }
@@ -129,7 +129,7 @@ class LikeNode: ASDisplayNode {
         likeIconNode.style.preferredSize = CGSize(width: 24, height: 24)
         return ASStackLayoutSpec(
             direction: .horizontal,
-            spacing: 0,
+            spacing: 5,
             justifyContent: .center,
             alignItems: .center,
             children: [likeIconNode,likeCountNode]
