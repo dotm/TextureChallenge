@@ -11,7 +11,6 @@
 		3CC9C54A226099C600F55828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C549226099C600F55828 /* ViewController.swift */; };
 		3CC9C54D226099C600F55828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C54B226099C600F55828 /* Main.storyboard */; };
 		3CC9C54F226099C700F55828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C54E226099C700F55828 /* Assets.xcassets */; };
-		3CC9C552226099C700F55828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C550226099C700F55828 /* LaunchScreen.storyboard */; };
 		CD089738681061F6ED4F3E81 /* Pods_TextureChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3666538D1C1D1081D51B5E /* Pods_TextureChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +20,6 @@
 		3CC9C549226099C600F55828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CC9C54C226099C600F55828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CC9C54E226099C700F55828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3CC9C551226099C700F55828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CC9C553226099C700F55828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82AD9A44EB855909A846A12C /* Pods-TextureChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureChallenge.debug.xcconfig"; path = "Target Support Files/Pods-TextureChallenge/Pods-TextureChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3666538D1C1D1081D51B5E /* Pods_TextureChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +63,6 @@
 				3CC9C549226099C600F55828 /* ViewController.swift */,
 				3CC9C54B226099C600F55828 /* Main.storyboard */,
 				3CC9C54E226099C700F55828 /* Assets.xcassets */,
-				3CC9C550226099C700F55828 /* LaunchScreen.storyboard */,
 				3CC9C553226099C700F55828 /* Info.plist */,
 			);
 			path = TextureChallenge;
@@ -85,7 +82,6 @@
 				82AD9A44EB855909A846A12C /* Pods-TextureChallenge.debug.xcconfig */,
 				C68E4E4D2985A23C4773CDA1 /* Pods-TextureChallenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -149,7 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC9C552226099C700F55828 /* LaunchScreen.storyboard in Resources */,
 				3CC9C54F226099C700F55828 /* Assets.xcassets in Resources */,
 				3CC9C54D226099C600F55828 /* Main.storyboard in Resources */,
 			);
@@ -229,14 +224,6 @@
 				3CC9C54C226099C600F55828 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3CC9C550226099C700F55828 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CC9C551226099C700F55828 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
