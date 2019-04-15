@@ -221,7 +221,7 @@ class ArticlePhotosRowNode: ASDisplayNode {
 }
 
 class ArticleTitleNode: ASDisplayNode {
-    private let profileImageNode = ASDisplayNode()
+    private let profileImageNode = ASImageNode()
     private let profileNameTextNode = ASTextNode()
     private let categoryNameTextNode = ASTextNode()
     
@@ -230,7 +230,10 @@ class ArticleTitleNode: ASDisplayNode {
         automaticallyManagesSubnodes = true
         backgroundColor = .yellow
         
-        profileImageNode.backgroundColor = .black
+        profileImageNode.image = UIImage(named: "profileImage")
+        profileImageNode.imageModificationBlock = {
+            image in image.makeCircularImage()
+        }
         
         profileNameTextNode.attributedText = NSAttributedString(string: "Anas Ziantar", attributes: [
             .foregroundColor: UIColor.black,

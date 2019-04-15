@@ -11,6 +11,7 @@
 		3CC9C54A226099C600F55828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9C549226099C600F55828 /* ViewController.swift */; };
 		3CC9C54D226099C600F55828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C54B226099C600F55828 /* Main.storyboard */; };
 		3CC9C54F226099C700F55828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC9C54E226099C700F55828 /* Assets.xcassets */; };
+		3CFF568A226460B100BA8E1A /* UIImage+makeCircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFF5689226460B100BA8E1A /* UIImage+makeCircularImage.swift */; };
 		CD089738681061F6ED4F3E81 /* Pods_TextureChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3666538D1C1D1081D51B5E /* Pods_TextureChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		3CC9C54C226099C600F55828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CC9C54E226099C700F55828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CC9C553226099C700F55828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CFF5689226460B100BA8E1A /* UIImage+makeCircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+makeCircularImage.swift"; sourceTree = "<group>"; };
 		82AD9A44EB855909A846A12C /* Pods-TextureChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureChallenge.debug.xcconfig"; path = "Target Support Files/Pods-TextureChallenge/Pods-TextureChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		AD3666538D1C1D1081D51B5E /* Pods_TextureChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68E4E4D2985A23C4773CDA1 /* Pods-TextureChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureChallenge.release.xcconfig"; path = "Target Support Files/Pods-TextureChallenge/Pods-TextureChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				3CC9C547226099C600F55828 /* AppDelegate.swift */,
 				3CC9C549226099C600F55828 /* ViewController.swift */,
+				3CFF5689226460B100BA8E1A /* UIImage+makeCircularImage.swift */,
 				3CC9C54B226099C600F55828 /* Main.storyboard */,
 				3CC9C54E226099C700F55828 /* Assets.xcassets */,
 				3CC9C553226099C700F55828 /* Info.plist */,
@@ -212,6 +215,7 @@
 			files = (
 				3CC9C54A226099C600F55828 /* ViewController.swift in Sources */,
 				3CC9C548226099C600F55828 /* AppDelegate.swift in Sources */,
+				3CFF568A226460B100BA8E1A /* UIImage+makeCircularImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
