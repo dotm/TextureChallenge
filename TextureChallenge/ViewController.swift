@@ -185,37 +185,41 @@ class ArticleVisitShopLinkNode: ASDisplayNode {
 }
 
 class ArticlePhotosRowNode: ASDisplayNode {
-    private let firstPhoto = ASDisplayNode()
-    private let secondPhoto = ASDisplayNode()
-    private let thirdPhoto = ASDisplayNode()
+    private let firstPhoto = ASImageNode()
+    private let secondPhoto = ASImageNode()
+    private let thirdPhoto = ASImageNode()
     
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
         backgroundColor = .black
         
-        firstPhoto.backgroundColor = .red
-        secondPhoto.backgroundColor = .green
-        thirdPhoto.backgroundColor = .blue
+        firstPhoto.image = UIImage(named: "firstPhoto")
+        secondPhoto.image = UIImage(named: "secondPhoto")
+        thirdPhoto.image = UIImage(named: "thirdPhoto")
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         self.style.maxWidth = ASDimension(unit: .points, value: constrainedSize.max.width)
         
-        let preferredSize = CGSize(width: 100, height: 100)
-        firstPhoto.style.preferredSize = preferredSize
-        secondPhoto.style.preferredSize = preferredSize
-        thirdPhoto.style.preferredSize = preferredSize
-        firstPhoto.style.flexGrow = CGFloat(1.0)
-        secondPhoto.style.flexGrow = CGFloat(1.0)
-        thirdPhoto.style.flexGrow = CGFloat(1.0)
+        firstPhoto.style.maxWidth = ASDimension(unit: .points, value: constrainedSize.max.width/3)
+        secondPhoto.style.maxWidth = ASDimension(unit: .points, value: constrainedSize.max.width/3)
+        thirdPhoto.style.maxWidth = ASDimension(unit: .points, value: constrainedSize.max.width/3)
+        firstPhoto.style.maxHeight = firstPhoto.style.maxWidth
+        secondPhoto.style.maxHeight = secondPhoto.style.maxWidth
+        thirdPhoto.style.maxHeight = thirdPhoto.style.maxWidth
+        firstPhoto.backgroundColor = .red
         
         return ASStackLayoutSpec(
             direction: .horizontal,
             spacing: 5,
             justifyContent: .spaceBetween,
             alignItems: .stretch,
-            children: [firstPhoto, secondPhoto, thirdPhoto]
+            children: [
+                firstPhoto,
+                secondPhoto,
+                thirdPhoto
+            ]
         )
     }
 }
