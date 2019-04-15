@@ -33,6 +33,7 @@ class ArticleNode: ASDisplayNode {
     private let articlePhotos = ArticlePhotosRowNode()
     private let shopLink = ArticleVisitShopLinkNode()
     private let articleDescription = ArticleDescription()
+    private let footer = ArticleFooterNode()
     
     override init() {
         super.init()
@@ -50,10 +51,89 @@ class ArticleNode: ASDisplayNode {
             spacing: 5,
             justifyContent: .start,
             alignItems: .stretch,
-            children: [titleSpec, self.articlePhotos, shopLinkSpec, articleDescriptionSpec]
+            children: [titleSpec, self.articlePhotos, shopLinkSpec, articleDescriptionSpec, footer]
         )
         
         return stackSpec
+    }
+}
+
+class ArticleFooterNode: ASDisplayNode {
+    private let likeNode = LikeNode()
+    private let commentNode = CommentNode()
+    
+    override init() {
+        super.init()
+        automaticallyManagesSubnodes = true
+        backgroundColor = .brown
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        let stack = ASStackLayoutSpec(
+            direction: .horizontal,
+            spacing: 0,
+            justifyContent: .spaceAround,
+            alignItems: .start,
+            children: [likeNode,commentNode]
+        )
+        return stack
+    }
+}
+
+class CommentNode: ASDisplayNode {
+    private let commentIconNode = ASImageNode()
+    private let commentCountNode = ASTextNode()
+    
+    override init() {
+        super.init()
+        automaticallyManagesSubnodes = true
+        backgroundColor = .cyan
+        
+        commentIconNode.image = UIImage(named: "comment")
+        commentCountNode.attributedText = NSAttributedString(string: "2", attributes: [
+            .foregroundColor: UIColor.black,
+            .font: UIFont.systemFont(ofSize: 24)
+            ]
+        )
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        commentIconNode.style.preferredSize = CGSize(width: 24, height: 24)
+        return ASStackLayoutSpec(
+            direction: .horizontal,
+            spacing: 0,
+            justifyContent: .center,
+            alignItems: .center,
+            children: [commentIconNode,commentCountNode]
+        )
+    }
+}
+class LikeNode: ASDisplayNode {
+    private let likeIconNode = ASImageNode()
+    private let likeCountNode = ASTextNode()
+    
+    override init() {
+        super.init()
+        automaticallyManagesSubnodes = true
+        backgroundColor = .cyan
+        
+        likeIconNode.image = UIImage(named: "like")
+        likeCountNode.attributedText = NSAttributedString(string: "106", attributes: [
+            .foregroundColor: UIColor.black,
+            .font: UIFont.systemFont(ofSize: 24)
+            ]
+        )
+    }
+    
+    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        likeIconNode.style.preferredSize = CGSize(width: 24, height: 24)
+        return ASStackLayoutSpec(
+            direction: .horizontal,
+            spacing: 0,
+            justifyContent: .center,
+            alignItems: .center,
+            children: [likeIconNode,likeCountNode]
+        )
     }
 }
 
